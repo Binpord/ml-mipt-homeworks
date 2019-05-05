@@ -32,8 +32,8 @@ if __name__ == '__main__':
     X_test_pca = pca.transform(X_test_unique)
 
     params = {
-        'depth': np.arange(1, 11),
-        'iterations': np.append(np.arange(100, 1100, 100), np.arange(1500, 5000, 500)),
+        'depth': np.arange(1, 6),
+        'iterations': np.arange(100, 600, 100),
     }
     grid_search = GridSearchCV(estimator=CatBoostClassifier(random_state=42, loss_function='MultiClass'),
                                scoring='accuracy',
